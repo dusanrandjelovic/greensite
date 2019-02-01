@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Free Video</title>
+  <style>
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+#video {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+}
+.podstrane a {
+  color: FloralWhite;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.podstrane a:hover {
+  color: ForestGreen;
+  background: -webkit-linear-gradient(WhiteSmoke, Beige);
+}
+.podstrane {
+  position: absolute;
+  min-width: 150px;
+  background: -webkit-linear-gradient(ForestGreen, DarkGreen);
+  box-shadow: 2px 9px 17px 1px rgba(7,12,10,0.7);
+  display: none;
+  border-left: 1px solid lime;
+  border-bottom: 1px solid lime;
+}
+.plus:hover .podstrane {
+  display: block;
+  opacity: 0.8;
+}
+
+p {
+  color: white;
+}
+.dugmad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45%;
+}
+.dugmad a {
+  padding: 8px;
+  color: FloralWhite;
+  background: ForestGreen;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+.dugmad a:hover {
+  cursor: pointer;
+  color: ForestGreen;
+  background: FloralWhite;
+}
+footer {
+  position: absolute;
+  background: -webkit-linear-gradient(rgba(0, 255, 0, 0.5), rgba(32, 139, 34, 0.5), rgba(0, 100, 0, 0.7)), url("crnapoz.jpg");
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.kraj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.kraj a {
+  display:block;
+  color: FloralWhite;
+  padding: 8px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+.kraj a:hover {
+  color: Lime;
+}
+.kraj p {
+  line-height: 1.5em;
+}
+h1 {
+  border-left: 1px solid lime;
+  border-top: 1px solid lime;
+  margin-bottom: -4px;
+  padding: 9px 0 0 9px;
+  color: LavenderBlush;
+  letter-spacing: 0.02em;
+}
+article {
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+.red {
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  flex-direction: column;
+}
+.red div {
+  text-align: center;
+  margin: 1% 2%;
+}
+.red p {
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+}
+.red a, .drugired a {
+  text-decoration: none;
+  color: DarkGreen;
+  background-color: white;
+  padding: 8px 12px;
+}
+.red a:hover, .drugired a:hover {
+  color: white;
+  background-color: DarkGreen;
+  border: 1px solid white;
+}
+.red h2{
+  color: white;
+  font-size: 38px;
+}
+.naslov {
+  text-align: center;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
+  color: white;
+}
+.drugired {
+  display: flex;
+  padding-top: 1%;
+  padding-bottom: 3.8%;
+  flex-direction: column;
+}
+.drugired p {
+  text-align: center;
+  margin-top: 30px;
+}
+.sl {
+  background: -webkit-linear-gradient(rgba(32, 139, 34, 0.3), rgba(0, 100, 0, 0.3)), url("sah.jpg");
+  background-size: cover;
+  height: 33vh;
+  width: 100%;
+}
+.sl1 {
+  background: -webkit-linear-gradient(rgba(32, 139, 34, 0.3), rgba(0, 100, 0, 0.3)), url("karta.jpg");
+  background-size: cover;
+  height: 33vh;
+  width: 100%;
+}
+.sl2 {
+  background: -webkit-linear-gradient(rgba(32, 139, 34, 0.3), rgba(0, 100, 0, 0.3)), url("kocke.jpg");
+  background-size: cover;
+  height: 33vh;
+  width: 100%;
+}
+.sl3 {
+  background: -webkit-linear-gradient(rgba(32, 139, 34, 0.3), rgba(0, 100, 0, 0.3)), url("crvenekocke.jpg");
+  background-size: cover;
+  height: 33vh;
+  width: 100%;
+}
+.sl:hover, .sl1:hover, .sl2:hover, .sl3:hover {
+  opacity: 0.8;
+}
+@media (min-width: 748px){
+  .dugmad {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+     justify-content: center;
+   flex-direction: row;
+   margin-top: -40px;
+  }
+
+h1 {
+  color: darkolivegreen;
+}
+.red {
+  flex-direction: row;
+}
+.drugired {
+  flex-direction: row;
+}
+.sl, .sl1, .sl2, .sl3 {
+  width: 25%;
+}
+.kraj {
+  flex-direction: row;
+  justify-content: space-evenly;
+  bottom: -290px;
+}
+}
+    </style>
+</head>
+<body>
+  <!--
+style="float: right; margin: 2%;
+  -->
+<main>
+  <ul>
+<li class="plus"><h1>Dusan Randjelovic</h1>
+  <div class="podstrane">
+    <a href="https://durasite.000webhostapp.com" target="_blank">Lion</a>
+    <a href="https://dusanrandjelovic.github.io/codesolution/" target="_blank">Solution</a>
+    <a href="https://dusanportfolio.000webhostapp.com" target="_blank">Sea World</a>
+    <a href="https://dusanrandjelovic.github.io/dusanrandjelovic/" target="_blank">Portfolio</a>
+    <a href="https://dusanrandjelovic.github.io/songsearch/" target="_blank">API</a>
+  </div>
+</li>
+</ul>
+
+<div class="dugmad">
+
+
+<p><a href="#dole">Discover More</a></p>
+
+</div>
+
+<video autoplay muted loop id="video">
+<source src="maglaostrvo.mp4" type="video/mp4">
+  <!--<source src="" type="video/mp4">-->
+Your browser does not support this video.
+</video>
+
+  </main>
+  <footer id="dole">
+<article>
+<div class="red">
+<div>
+  <h2>&#9858;</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</p>
+  <a href="https://dusanrandjelovic.github.io/dusan/" target="_blank">Ocean</a>
+</div>
+<div>
+  <h2> &#9826;</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</p>
+  <a href="https://dusanrandjelovic.github.io/flexsajt/" target="_blank">Flex</a>
+</div>
+<div>
+  <h2>&#9817;</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua.</p>
+  <a href="https://dusanrandjelovic.github.io/simplequiz/" target="_blank">Quiz</a>
+</div>
+</div>
+</article>
+<article>
+<h2 class="naslov">See more</h2>
+<div class="drugired">
+<div class="sl">
+  <p><a href="https://dusanrandjelovic.github.io/songsearch/" target="_blank">Song Search &#9821;</a></p>
+</div>
+<div class="sl1">
+  <p><a href="https://dusanrandjelovic.github.io/sw/" target="_blank">Star Wars &#9812;</a></p>
+</div>
+<div class="sl2">
+  <p><a href="https://dusanrandjelovic.github.io/pokemon/" target="_blank">Pokemon &#9827;</a></p>
+</div>
+<div class="sl3">
+  <p><a href="https://dusanrandjelovic.github.io/quotes/" target="_blank">Quotes &#9860;</a></p>
+</div>
+</div>
+</article>
+<article class="kraj">
+    <div>
+      <img src="duramali.png" height="70">
+    <p>&copy; Dusan Randjelovic</p>
+  </div>
+
+    <nav>
+      <a href="https://dusanrandjelovic.github.io/codesolution/" target="_blank">Code Solution</a>
+      <a href="https://durasite.000webhostapp.com" target="_blank">Lion</a>
+      <a href="https://dusanportfolio.000webhostapp.com" target="_blank">Sea World</a>
+      <a href="https://dusanrandjelovic.github.io/recepti/" target="_blank">Recipes</a>
+      <a href="https://dusanrandjelovic.github.io/onlineshop/" target="_blank">Shop</a>
+    </nav>
+    <nav>
+      <a href="https://dusanrandjelovic.github.io/dusanrandjelovic/" target="_blank">Portfolio</a>
+      <a href="https://codepen.io/dusanrandjelovic/full/RqvomN/" target="_blank">Photos</a>
+      <a href="https://dusanrandjelovic.github.io/shopifybasic/" target="_blank">Shopify</a>
+      <a href="https://dusanrandjelovic.github.io/sumarak/" target="_blank">Nature</a>
+      <a href="https://dusanrandjelovic.github.io/serbiandogs/" target="_blank">Dogs</a>
+    </nav>
+    <div>
+      <p>I am self-taught website developer.<br>
+      My diploma is irrelevant, but still, I can do this.<br>
+      Is it too easy, it is not on me to judge.</p>
+    </div>
+  </article>
+    </footer>
+  </body>
+  </html>
